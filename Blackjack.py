@@ -117,7 +117,7 @@ También puede introducir all in si quieres apostar todas tus fichas o end si qu
                 print()
 
                 # Pregunta al jugador si desea otra carta (excepto en el primer turno)
-                if i > 1 and sum(jugador1.mano) < 21:
+                if i > 1 and sum(jugador1.mano) <= 21:
                     while True:
                         imprimir_poco_a_poco("¿Quieres que se te reparta otra carta? S/N ")
                         otra = input().upper()
@@ -161,7 +161,7 @@ También puede introducir all in si quieres apostar todas tus fichas o end si qu
             print()
 
             # Fin del turno del crupier si su mano supera 16
-            if sum(crupier.mano) > 16:
+            if sum(crupier.mano) >= 16:
                 break
 
             i += 1
